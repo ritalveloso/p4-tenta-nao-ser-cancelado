@@ -45,11 +45,11 @@ async function gerarPergunta() {
         historico.push({ role: "user", content: texto });
     }
 
-    const resposta = await fetch("../php/gerar.php", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ historico: historico })
-    });
+    const resposta = await fetch(`${API_URL}/gerar`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ historico: historico })
+});
 
     const dados = await resposta.json();
 
