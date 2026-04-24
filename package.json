@@ -1,7 +1,7 @@
 {
   "name": "deformer-projeto4",
   "version": "1.0.0",
-  "description": "Projeto de Multimédia Interativa",
+  "description": "Tenta não ser cancelado",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
