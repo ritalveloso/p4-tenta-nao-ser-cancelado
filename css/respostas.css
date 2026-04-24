@@ -1,0 +1,135 @@
+.caixaR {
+    width: auto;
+    height: auto;
+    position: absolute;
+    padding: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: top;
+    background: #99BFFA;
+    border-radius: 10px;
+    max-width: 300px;
+    font-family: "Montserrat", sans-serif;
+    border: black solid 2px;
+    box-shadow: 0 0 10px black;
+    transition: transform ease 0.2s;
+    animation: popup 0.25s ease-out;
+    z-index: 101;
+}
+
+.caixaR:hover {
+    transform: scale(101%);
+}
+
+.username {
+    font-weight: bold;
+}
+
+.tempo {
+    position: absolute;
+    right: 20px;
+    font-size: 12px;
+}
+
+.texto {
+    font-size: 15px;
+    line-height: 1.4;
+    color: black;
+}
+
+.comentarios {
+    margin-left: 10px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease;
+}
+
+.bolinhas {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    justify-content: right;
+    padding: 10px 0;
+}
+
+.bolas {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.bolas:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.textoD {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textoD.desativado {
+    display: none;
+}
+
+.resposta {
+    width: 100%;
+    min-height: 60px;
+    max-height: 200px;
+    resize: none;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 2px solid cornflowerblue;
+    outline: none;
+    font-size: 15px;
+    background: lightgray;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.resposta:focus {
+    border-color: darkblue;
+    background: white;
+}
+
+
+.denunciar, .apagar, .responder {
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 4px;
+}
+
+.denunciar {
+    background-image: url("../assets/report.png");
+    background-color: #D9B010;
+}
+
+.apagar {
+    background-image: url("../assets/delete.png");
+    background-color: #B91719;
+}
+
+.responder {
+    background-image: url("../assets/mensagem.png");
+    background-color: #8E00A6;
+}
+
+@keyframes popup {
+    0% {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

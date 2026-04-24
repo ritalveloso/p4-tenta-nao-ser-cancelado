@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Tenta não ser cancelado</title>
+    <link rel="stylesheet" href="css/entrevista.css">
+    <link rel="stylesheet" href="css/respostas.css">
+</head>
+<body>
+<div id="caixas" class="inicio">
+    <div class="titulo">Tenta não ser cancelado</div>
+    <div class="botoes">
+        <div id="start" class="start">Começar</div>
+        <div id="instructions" class="instructions">Instruções</div>
+        <div id="about" class="about">Sobre</div>
+    </div>
+
+    <div id="instructionsOverlay" class="overlay esconder">
+        <div class="instructionsBox">
+            <button class="closeIntructions">X</button>
+
+            <h2>INSTRUÇÕES</h2>
+            <p> Para iniciar esta experiência, deves carregar no botão “COMEÇAR”. </p>
+            <p> Ao clicares nele, iniciarás uma entrevista em que te serão feitas perguntas sobre alguns temas,
+                às quais responderás através da voz. </p>
+        </div>
+    </div>
+
+    <div id="aboutOverlay" class="overlay esconder">
+        <div class="aboutBox">
+            <button class="closeAbout">X</button>
+
+            <h2>SOBRE</h2>
+            <p> Este projeto foi realizado por Diogo Nunes, Pedro Guedes e Rita Veloso, </p>
+            <p> no âmbito da unidade curricular Projeto 4 - Aplicações Multimédia, </p>
+            <p> do 3º ano da Licenciatura em Design e Multimédia da FCTUC. </p>
+        </div>
+    </div>
+
+    <div id="entrevistador" class="caixaZ esconder">
+        <div id="resultado"></div>
+        <div class="caixaVideo">
+            <video
+                    src="assets/entrevistador.mp4"
+                    autoplay
+                    loop
+                    muted
+                    playsinline
+                    disablepictureinpicture
+                    controlsList="nodownload noplaybackrate"
+            ></video>
+        </div>
+    </div>
+    <div id="cameraBox" class="caixaZ esconder">
+        <textarea id="texto"></textarea>
+    </div>
+</div>
+
+    <script src="js/entrevista.js"></script>
+    <script src="js/respostas.js"></script>
+</body>
+</html>

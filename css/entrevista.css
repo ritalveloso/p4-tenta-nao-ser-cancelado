@@ -1,0 +1,259 @@
+body {
+    margin: 0;
+    font-family: Impact, sans-serif;
+    box-sizing: content-box;
+    background: linear-gradient(135deg, #0A0F2C, #1A2A6C);
+}
+
+#caixas {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+    padding: 40px;
+    gap: 40px 20px;
+    transition: all 3s ease;
+    box-sizing: border-box;
+}
+
+#caixas.inicio .titulo {
+    padding-top: 25vh;
+    font-size: 100px;
+}
+
+.titulo {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+    color: white;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+}
+
+.botoes {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    transition: opacity 0.5s ease;
+    align-self: start;
+}
+.botoes.esconder {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.start {
+    background: white;
+    font-size: 40px;
+    padding: 20px;
+    cursor: pointer;
+    color: #0b1b3a;
+}
+
+.instructions {
+    background: white;
+    font-size: 40px;
+    padding: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    color: #0b1b3a;
+}
+
+.about {
+    background: white;
+    font-size: 40px;
+    padding: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    color: #0b1b3a;
+}
+
+/* overlay para demonstrar as informações Sobre e Instruções */
+.overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: opacity .3s ease;
+}
+
+.esconder {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* caixa Sobre */
+.aboutBox {
+    width: 600px;
+    max-width: 90%;
+    background: #0b1b3a;
+    border: 2px solid white;
+    padding: 40px;
+    color: white;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* botão fechar */
+.closeAbout {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Sobre titulo */
+.aboutBox h2 {
+    margin-top: 0;
+    letter-spacing: 3px;
+    font-size: 40px;
+    font-family: Impact, sans-serif;
+}
+
+/* Sobre conteudo */
+.aboutBox p{
+    font-family: Mona, sans-serif;
+    line-height: 5px;
+}
+
+/* caixa Instruções */
+.instructionsBox {
+    width: 600px;
+    max-width: 90%;
+    background: #0b1b3a;
+    border: 2px solid white;
+    padding: 40px;
+    color: white;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* botão fechar */
+.closeIntructions {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Instruções titulo */
+.instructionsBox h2 {
+    margin-top: 0;
+    letter-spacing: 3px;
+    font-size: 40px;
+    font-family: Impact, sans-serif;
+}
+
+/* Intruções conteudo */
+.instructionsBox p{
+    font-family: Mona, sans-serif;
+}
+
+.caixaZ {
+    background: darkgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: opacity 1s ease-in;
+}
+
+.caixaZ.esconder {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#entrevistador {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+#cameraBox {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+#resultado {
+    font-size: 20px;
+
+}
+
+.caixaVideo {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.caixaVideo video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.verde {
+    border: green 3px solid;
+}
+
+#resultado {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    z-index: 10;
+    color: white;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+#entrevistador button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+#cameraBox video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+
+#texto {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    resize: none;
+    height: 100px;
+    z-index: 100;
+}
+
+#cameraBox button {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 101;
+}
