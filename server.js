@@ -5,11 +5,9 @@ const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static('./')); // Serve os vossos ficheiros HTML/JS
+app.use(express.static('./'));
 
-app.post('/gerar', async (req, res) => {
-    // Aqui o Pilhas faz a chamada à API da Groq
-    // Usando process.env.GROQ_API_KEY para segurança
+app.post('/php/gerar.php', async (req, res) => {  
     res.json({ mensagem: "Servidor a funcionar!" });
 });
 
