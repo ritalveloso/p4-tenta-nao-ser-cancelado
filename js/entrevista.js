@@ -38,6 +38,7 @@ start.addEventListener("click", () => {
 
 //criar a pergunta
 async function gerarPergunta() {
+    const API_URL = "https://p4-tenta-nao-ser-cancelado.onrender.com";
     const texto = document.getElementById("texto").value;
     const resultado = document.getElementById("resultado");
 
